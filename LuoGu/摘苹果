@@ -1,0 +1,26 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string input_arr;
+    getline(cin, input_arr);
+    istringstream iss(input_arr);
+
+    int input_height;
+    cin >> input_height;
+    
+
+    int apple;
+    int total = 0;
+    while(iss >> apple)
+    {
+        if(apple < input_height + 30)
+        {
+            total += 1;
+        }
+    }
+    cout << total;
+}
